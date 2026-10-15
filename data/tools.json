@@ -124,15 +124,15 @@
     "url": "https://github.com/features/copilot",
     "category": "Vibe Coding",
     "summary": "AI coding assistance for supported developer workflows.",
-    "pricing": "Pricing and usage limits require review",
+    "pricing": "Free plan with usage limits; paid plans available",
     "pricing_url": "https://github.com/features/copilot",
     "tags": [
       "coding",
       "IDE",
       "github"
     ],
-    "status": "pending",
-    "verified": null,
+    "status": "approved",
+    "verified": "2026-10-15",
     "score": null
   },
   {
