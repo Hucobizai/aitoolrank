@@ -1,7 +1,427 @@
 [
-  {"id":"ollama","name":"Ollama","url":"https://ollama.com/","category":"AI Agents","summary":"Run supported open models locally.","pricing":"Free local software; hardware costs apply","pricing_url":"https://ollama.com/","tags":["local","models","privacy"],"status":"approved","verified":"2026-10-15","score":null},
-  {"id":"langgraph","name":"LangGraph","url":"https://www.langchain.com/langgraph","category":"AI Agents","summary":"Framework for building stateful agent workflows.","pricing":"Open-source framework; hosted services may cost extra","pricing_url":"https://www.langchain.com/langgraph","tags":["agents","framework","code"],"status":"approved","verified":"2026-10-15","score":null},
-  {"id":"continue","name":"Continue","url":"https://www.continue.dev/","category":"Vibe Coding","summary":"Open-source AI coding assistant platform.","pricing":"Open-source components; model/provider costs may apply","pricing_url":"https://www.continue.dev/","tags":["coding","IDE","open-source"],"status":"approved","verified":"2026-10-15","score":null},
-  {"id":"aider","name":"Aider","url":"https://aider.chat/","category":"Vibe Coding","summary":"Terminal-based AI pair programming assistant.","pricing":"Open-source; model/provider costs may apply","pricing_url":"https://aider.chat/","tags":["coding","terminal","git"],"status":"approved","verified":"2026-10-15","score":null},
-  {"id":"comfyui","name":"ComfyUI","url":"https://www.comfy.org/","category":"AI Video","summary":"Node-based generative media workflows with compatible models.","pricing":"Open-source; compute and hosted services may cost extra","pricing_url":"https://www.comfy.org/","tags":["video","image","workflows"],"status":"approved","verified":"2026-10-15","score":null}
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "url": "https://ollama.com/",
+    "category": "AI Agents",
+    "summary": "Run supported open models locally.",
+    "pricing": "Free local software; hardware costs apply",
+    "pricing_url": "https://ollama.com/",
+    "tags": [
+      "local",
+      "models",
+      "privacy"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "langgraph",
+    "name": "LangGraph",
+    "url": "https://www.langchain.com/langgraph",
+    "category": "AI Agents",
+    "summary": "Framework for building stateful agent workflows.",
+    "pricing": "Open-source framework; hosted services may cost extra",
+    "pricing_url": "https://www.langchain.com/langgraph",
+    "tags": [
+      "agents",
+      "framework",
+      "code"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "continue",
+    "name": "Continue",
+    "url": "https://www.continue.dev/",
+    "category": "Vibe Coding",
+    "summary": "Open-source AI coding assistant platform.",
+    "pricing": "Open-source components; model/provider costs may apply",
+    "pricing_url": "https://www.continue.dev/",
+    "tags": [
+      "coding",
+      "IDE",
+      "open-source"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "url": "https://aider.chat/",
+    "category": "Vibe Coding",
+    "summary": "Terminal-based AI pair programming assistant.",
+    "pricing": "Open-source; model/provider costs may apply",
+    "pricing_url": "https://aider.chat/",
+    "tags": [
+      "coding",
+      "terminal",
+      "git"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "comfyui",
+    "name": "ComfyUI",
+    "url": "https://www.comfy.org/",
+    "category": "AI Video",
+    "summary": "Node-based generative media workflows with compatible models.",
+    "pricing": "Open-source; compute and hosted services may cost extra",
+    "pricing_url": "https://www.comfy.org/",
+    "tags": [
+      "video",
+      "image",
+      "workflows"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.com/",
+    "category": "Vibe Coding",
+    "summary": "AI-assisted code editor with chat and agent features.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://cursor.com/",
+    "tags": [
+      "coding",
+      "editor",
+      "agents"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "url": "https://replit.com/",
+    "category": "Vibe Coding",
+    "summary": "Browser-based software development platform with AI features.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://replit.com/",
+    "tags": [
+      "coding",
+      "browser",
+      "apps"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "Vibe Coding",
+    "summary": "AI coding assistance for supported developer workflows.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://github.com/features/copilot",
+    "tags": [
+      "coding",
+      "IDE",
+      "github"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt",
+    "url": "https://bolt.new/",
+    "category": "Vibe Coding",
+    "summary": "Prompt-driven web app prototyping and development.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://bolt.new/",
+    "tags": [
+      "coding",
+      "web",
+      "apps"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev/",
+    "category": "Vibe Coding",
+    "summary": "Prompt-driven application building platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://lovable.dev/",
+    "tags": [
+      "coding",
+      "web",
+      "apps"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "url": "https://www.crewai.com/",
+    "category": "AI Agents",
+    "summary": "Framework and platform for multi-agent workflows.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://www.crewai.com/",
+    "tags": [
+      "agents",
+      "framework",
+      "automation"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "autogen",
+    "name": "AutoGen",
+    "url": "https://github.com/microsoft/autogen",
+    "category": "AI Agents",
+    "summary": "Open-source framework for agent-based applications.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://github.com/microsoft/autogen",
+    "tags": [
+      "agents",
+      "framework",
+      "code"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "url": "https://dify.ai/",
+    "category": "AI Agents",
+    "summary": "Platform for building AI applications and workflows.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://dify.ai/",
+    "tags": [
+      "agents",
+      "workflows",
+      "apps"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "flowise",
+    "name": "Flowise",
+    "url": "https://flowiseai.com/",
+    "category": "AI Agents",
+    "summary": "Visual builder for LLM applications and agent workflows.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://flowiseai.com/",
+    "tags": [
+      "agents",
+      "visual",
+      "workflows"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "url": "https://n8n.io/",
+    "category": "AI Agents",
+    "summary": "Workflow automation platform with AI integrations.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://n8n.io/",
+    "tags": [
+      "automation",
+      "workflows",
+      "agents"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com/",
+    "category": "AI Video",
+    "summary": "AI-powered video and creative generation platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://runwayml.com/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "url": "https://pika.art/",
+    "category": "AI Video",
+    "summary": "AI video creation platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://pika.art/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "kling",
+    "name": "Kling AI",
+    "url": "https://klingai.com/",
+    "category": "AI Video",
+    "summary": "AI video generation platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://klingai.com/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "luma",
+    "name": "Luma AI",
+    "url": "https://lumalabs.ai/",
+    "category": "AI Video",
+    "summary": "AI-powered visual and video creation tools.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://lumalabs.ai/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "url": "https://www.heygen.com/",
+    "category": "AI Video",
+    "summary": "AI avatar and video production platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://www.heygen.com/",
+    "tags": [
+      "video",
+      "avatars",
+      "presentations"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "url": "https://www.synthesia.io/",
+    "category": "AI Video",
+    "summary": "AI avatar video platform for presentations and training.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://www.synthesia.io/",
+    "tags": [
+      "video",
+      "avatars",
+      "training"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io/",
+    "category": "AI Audio",
+    "summary": "AI voice generation and audio tools.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://elevenlabs.io/",
+    "tags": [
+      "audio",
+      "voice",
+      "speech"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "url": "https://suno.com/",
+    "category": "AI Audio",
+    "summary": "AI music generation platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://suno.com/",
+    "tags": [
+      "audio",
+      "music",
+      "generation"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI Research",
+    "summary": "AI-powered search and answer platform.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://www.perplexity.ai/",
+    "tags": [
+      "research",
+      "search",
+      "answers"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google/",
+    "category": "AI Research",
+    "summary": "AI research assistant for working with uploaded sources.",
+    "pricing": "Pricing and usage limits require review",
+    "pricing_url": "https://notebooklm.google/",
+    "tags": [
+      "research",
+      "documents",
+      "sources"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
+  }
 ]
