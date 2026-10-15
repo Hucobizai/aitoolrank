@@ -1,0 +1,7 @@
+[
+ {"name":"GitHub releases: Ollama","url":"https://github.com/ollama/ollama/releases.atom","category":"AI Agents"},
+ {"name":"GitHub releases: LangGraph","url":"https://github.com/langchain-ai/langgraph/releases.atom","category":"AI Agents"},
+ {"name":"GitHub releases: Aider","url":"https://github.com/Aider-AI/aider/releases.atom","category":"Vibe Coding"},
+ {"name":"GitHub releases: ComfyUI","url":"https://github.com/comfyanonymous/ComfyUI/releases.atom","category":"AI Video"},
+ {"name":"GitHub releases: Continue","url":"https://github.com/continuedev/continue/releases.atom","category":"Vibe Coding"}
+]
