@@ -85,6 +85,40 @@
     "score": null
   },
   {
+    "id": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.com/",
+    "category": "Vibe Coding",
+    "summary": "AI-assisted code editor with chat and agent features.",
+    "pricing": "Free tier with limited AI usage; paid plans available",
+    "pricing_url": "https://cursor.com/",
+    "tags": [
+      "coding",
+      "editor",
+      "agents"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "url": "https://replit.com/",
+    "category": "Vibe Coding",
+    "summary": "Browser-based software development platform with AI features.",
+    "pricing": "Free starter access with limits; paid plans and usage-based costs",
+    "pricing_url": "https://replit.com/",
+    "tags": [
+      "coding",
+      "browser",
+      "apps"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
     "id": "github-copilot",
     "name": "GitHub Copilot",
     "url": "https://github.com/features/copilot",
@@ -96,6 +130,40 @@
       "coding",
       "IDE",
       "github"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt",
+    "url": "https://bolt.new/",
+    "category": "Vibe Coding",
+    "summary": "AI-powered tool for building and editing web applications from natural-language prompts.",
+    "pricing": "Free plan with token limits; paid plans available",
+    "pricing_url": "https://bolt.new/",
+    "tags": [
+      "coding",
+      "web",
+      "apps"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev/",
+    "category": "Vibe Coding",
+    "summary": "Prompt-driven application building platform.",
+    "pricing": "Free plan with limited credits; paid plans available",
+    "pricing_url": "https://lovable.dev/",
+    "tags": [
+      "coding",
+      "web",
+      "apps"
     ],
     "status": "approved",
     "verified": "2026-10-15",
