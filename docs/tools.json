@@ -83,5 +83,22 @@
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "Vibe Coding",
+    "summary": "AI coding assistance for supported developer workflows.",
+    "pricing": "Free plan with usage limits; paid plans available",
+    "pricing_url": "https://github.com/features/copilot",
+    "tags": [
+      "coding",
+      "IDE",
+      "github"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
   }
 ]
