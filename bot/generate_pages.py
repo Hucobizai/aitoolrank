@@ -97,9 +97,9 @@ def main():
     tools = json.loads(SOURCE.read_text(encoding="utf-8"))
     approved = [t for t in tools if t.get("status") == "approved"]
 
-       OUTPUT.mkdir(parents=True, exist_ok=True)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
 
-    # Remove generated pages for tools that are no longer approved.
+      # Remove generated pages for tools that are no longer approved.
     approved_ids = {str(tool["id"]) for tool in approved}
 
     for page_dir in OUTPUT.iterdir():
