@@ -202,5 +202,22 @@
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
+  },
+  {
+    "id": "flowise",
+    "name": "Flowise",
+    "url": "https://flowiseai.com/",
+    "category": "AI Agents",
+    "summary": "Visual builder for LLM applications and agent workflows.",
+    "pricing": "Open-source self-hosted software; cloud plans and usage limits vary; hosting and model/API costs may apply",
+    "pricing_url": "https://flowiseai.com/",
+    "tags": [
+      "agents",
+      "visual",
+      "workflows"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
   }
 ]
