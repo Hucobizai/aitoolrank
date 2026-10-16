@@ -1,5 +1,16 @@
 [
   {
+    "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.41.2",
+    "title": "v0.41.2",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.41.2",
+    "source": "GitHub releases: ComfyUI",
+    "category": "AI Video",
+    "published": "2026-10-16T04:58:24Z",
+    "discovered": "2026-10-16",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
     "id": "GitHub releases: Ollama:tag:github.com,2008:Repository/658928958/v0.40.5",
     "title": "v0.40.5",
     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.5",
