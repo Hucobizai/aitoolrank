@@ -142,8 +142,8 @@ const profiles = {
 },
     needs: 'Account; free credits are limited.',
     budget: 'free-tier'
-  },
-
+ }
+};
 
 const taskNames = {
   'local-ai': 'local AI',
