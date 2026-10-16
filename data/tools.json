@@ -378,16 +378,16 @@
     "name": "Suno",
     "url": "https://suno.com/",
     "category": "AI Audio",
-    "summary": "AI music generation platform.",
-    "pricing": "Pricing and usage limits require review",
-    "pricing_url": "https://suno.com/",
+    "summary": "AI music generation platform for creating songs from text prompts, with music editing and audio tools.",
+    "pricing": "Free: 50 credits daily, no commercial rights; Pro: 2,500 credits/month with commercial rights; Premier: 10,000 credits/month with commercial rights. Paid prices vary by region and billing cycle.",
+    "pricing_url": "https://suno.com/pricing",
     "tags": [
       "audio",
       "music",
       "generation"
     ],
-    "status": "pending",
-    "verified": null,
+    "status": "approved",
+    "verified": "2026-10-16",
     "score": null
   },
   {
