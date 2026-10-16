@@ -97,7 +97,18 @@ def main():
     tools = json.loads(SOURCE.read_text(encoding="utf-8"))
     approved = [t for t in tools if t.get("status") == "approved"]
 
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+       OUTPUT.mkdir(parents=True, exist_ok=True)
+
+    # Remove generated pages for tools that are no longer approved.
+    approved_ids = {str(tool["id"]) for tool in approved}
+
+    for page_dir in OUTPUT.iterdir():
+        if page_dir.is_dir() and page_dir.name not in approved_ids:
+            index_file = page_dir / "index.html"
+            if index_file.exists():
+                index_file.unlink()
+                page_dir.rmdir()
+
     count = 0
 
     for tool in approved:
