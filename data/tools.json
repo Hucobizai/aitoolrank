@@ -459,5 +459,24 @@
 "status": "approved",
 "verified": "2026-10-16",
     "score": null
+
+  },
+  {
+    "id": "gemini",
+    "name": "Google Gemini",
+    "url": "https://gemini.google.com/",
+    "category": "AI Assistants",
+    "summary": "Google's AI assistant for writing, research, coding, brainstorming, image creation, and working with information across Google apps.",
+    "pricing": "Free plan available; paid plans offer additional features and higher usage limits. Exact pricing requires verification.",
+    "pricing_url": "https://gemini.google/subscriptions/",
+    "tags": [
+      "assistant",
+      "writing",
+      "research",
+      "coding"
+    ],
+    "status": "pending",
+    "verified": null,
+    "score": null
   }
 ]
