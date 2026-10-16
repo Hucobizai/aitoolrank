@@ -108,11 +108,11 @@ const profiles = {
     budget: 'free-tier'
   },
   replit: {
-    tasks: ['code'],
+    tasks: ['app'],
     levels: ['beginner', 'intermediate', 'advanced'],
     reasons: {
-      code: 'Browser-based environment for creating and deploying apps.'
-    },
+  app: 'Browser-based environment for creating and deploying apps.'
+},
     needs: 'Account; deployment and AI usage may incur charges.',
     budget: 'free-tier'
   },
@@ -126,29 +126,30 @@ const profiles = {
     budget: 'free-tier'
   },
   bolt: {
-    tasks: ['code'],
+    tasks: ['app'],
     levels: ['beginner', 'intermediate', 'advanced'],
-    reasons: {
-      code: 'Builds and edits web apps from natural-language prompts.'
-    },
+   reasons: {
+  app: 'Builds and edits web apps from natural-language prompts.'
+},
     needs: 'Account; token limits and usage-based restrictions.',
     budget: 'free-tier'
   },
   lovable: {
-    tasks: ['code'],
+    tasks: ['app'],
     levels: ['beginner', 'intermediate', 'advanced'],
     reasons: {
-      code: 'Prompt-driven web application creation.'
-    },
+  app: 'Prompt-driven web application creation.'
+},
     needs: 'Account; free credits are limited.',
     budget: 'free-tier'
-  }
-};
+  },
+
 
 const taskNames = {
   'local-ai': 'local AI',
   agent: 'AI agents',
-  code: 'coding and app building',
+  code: 'coding assistance',
+app: 'website and app building',
   media: 'generative media'
 };
 
