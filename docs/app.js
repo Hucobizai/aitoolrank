@@ -169,11 +169,23 @@ function renderFinder() {
 
   // Free means a documented no-cost entry point,
   // not guaranteed zero total cost.
-  const eligible = budget === 'free'
-    ? matches.filter(x =>
-        ['free', 'free-tier'].includes(x.profile.budget)
-      )
-    : matches;
+
+const eligible = (budget === 'free'
+  ? matches.filter(x =>
+      ['free', 'free-tier'].includes(x.profile.budget)
+    )
+  : matches
+).sort((a, b) => {
+  if (task === 'agent') {
+    const priority = {
+      langgraph: 0,
+      ollama: 1
+    };
+    return (priority[a.tool.id] ?? 99) -
+           (priority[b.tool.id] ?? 99);
+  }
+  return 0;
+});
 
   if (!eligible.length) {
     out.append(el(
