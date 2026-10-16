@@ -438,8 +438,26 @@
       "research",
       "coding"
     ],
-   "status": "approved",
-"verified": "2026-10-16",
+     "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "url": "https://claude.ai/",
+    "category": "AI Assistants",
+    "summary": "AI assistant by Anthropic for writing, research, coding, document analysis, and complex reasoning.",
+    "pricing": "Free plan available; paid plans offer higher usage limits and additional features. Exact pricing requires verification.",
+    "pricing_url": "https://claude.com/pricing",
+    "tags": [
+      "assistant",
+      "writing",
+      "research",
+      "coding"
+    ],
+    "status": "pending",
+    "verified": null,
     "score": null
   }
 ]
