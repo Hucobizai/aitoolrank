@@ -447,8 +447,8 @@
     "name": "Claude",
     "url": "https://claude.ai/",
     "category": "AI Assistants",
-    "summary": "AI assistant by Anthropic for writing, research, coding, document analysis, and complex reasoning.",
-    "pricing": "Free plan available; paid plans offer higher usage limits and additional features. Exact pricing requires verification.",
+    "summary": "AI assistant by Anthropic for writing, research, coding, document analysis, and complex reasoning.",  
+"pricing": "Free plan available; Pro $20/month or $200/year ($17/month equivalent); Max from $100/month. Usage limits and features vary by plan.",
     "pricing_url": "https://claude.com/pricing",
     "tags": [
       "assistant",
@@ -456,8 +456,8 @@
       "research",
       "coding"
     ],
-    "status": "pending",
-    "verified": null,
+"status": "approved",
+"verified": "2026-10-16",
     "score": null
   }
 ]
