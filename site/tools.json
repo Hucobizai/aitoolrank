@@ -304,5 +304,22 @@
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "url": "https://www.heygen.com/",
+    "category": "AI Video",
+    "summary": "AI video platform for creating talking-avatar videos, presentations, and multilingual video content.",
+    "pricing": "Free plan: 3 videos/month, up to 1 minute each; Creator starts at $29/month with 600 credits; Pro starts at $49/month. Monthly billing.",
+    "pricing_url": "https://www.heygen.com/pricing",
+    "tags": [
+      "video",
+      "avatars",
+      "presentations"
+    ],
+    "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
   }
 ]
