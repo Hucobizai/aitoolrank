@@ -372,5 +372,22 @@
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI Research",
+    "summary": "AI-powered research and answer engine that searches the web, provides sourced answers, and helps users explore topics through follow-up questions.",
+    "pricing": "Free plan available; Pro $17/month billed annually; Max $167/month billed annually. Prices and usage limits may change.",
+    "pricing_url": "https://www.perplexity.ai/pro",
+    "tags": [
+      "research",
+      "search",
+      "answers"
+    ],
+    "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
   }
 ]
