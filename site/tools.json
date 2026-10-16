@@ -338,5 +338,22 @@
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io/",
+    "category": "AI Audio",
+    "summary": "AI voice generation platform for realistic text-to-speech, voice cloning, speech-to-text, dubbing, music, and sound effects.",
+    "pricing": "Free: 10,000 credits/month; Starter $6/month for 30,000 credits; Creator $22/month for 121,000 credits; Pro $99/month for 600,000 credits. Promotional discounts may apply.",
+    "pricing_url": "https://elevenlabs.io/pricing",
+    "tags": [
+      "audio",
+      "voice",
+      "speech"
+    ],
+    "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
   }
 ]
