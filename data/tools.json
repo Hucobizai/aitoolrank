@@ -243,15 +243,15 @@
     "url": "https://n8n.io/",
     "category": "AI Agents",
     "summary": "Workflow automation platform with AI integrations.",
-    "pricing": "Pricing and usage limits require review",
+    "pricing": "Self-hosted Community Edition available; paid cloud plans available; hosting and AI/API costs may apply",
     "pricing_url": "https://n8n.io/",
     "tags": [
       "automation",
       "workflows",
       "agents"
     ],
-    "status": "pending",
-    "verified": null,
+    "status": "approved",
+  "verified": "2026-10-15",
     "score": null
   },
   {
