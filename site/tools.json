@@ -321,5 +321,22 @@
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "url": "https://www.synthesia.io/",
+    "category": "AI Video",
+    "summary": "AI video creation platform for producing professional training, educational, and business videos using realistic AI avatars and multilingual voiceovers.",
+    "pricing": "Basic free plan with 500 credits/month; Starter from $14/month billed annually with 15,000 credits/year; Pro from $59/month billed annually with 72,000 credits/year; Enterprise custom pricing.",
+    "pricing_url": "https://www.synthesia.io/pricing",
+    "tags": [
+      "video",
+      "avatars",
+      "training"
+    ],
+    "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
   }
 ]
