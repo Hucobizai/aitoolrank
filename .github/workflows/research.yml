@@ -24,5 +24,5 @@ jobs:
       - name: Commit pending candidates
         run: |
           git config user.name 'aitoolrank-bot'
-          git add data/review_queue.json site/tools.json docs/tools.json docs/tools/
+          git add data/review_queue.json site/tools.json docs/tools.json docs/tools/ docs/sitemap.xml
           if ! git diff --cached --quiet; then git commit -m 'Update research review queue'; git push; fi
