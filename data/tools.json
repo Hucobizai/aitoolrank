@@ -260,15 +260,15 @@
     "url": "https://runwayml.com/",
     "category": "AI Video",
     "summary": "AI-powered video and creative generation platform.",
-    "pricing": "Pricing and usage limits require review",
+    "pricing": "Free plan with limited credits; paid subscription plans available; video generation uses credits",
     "pricing_url": "https://runwayml.com/",
     "tags": [
       "video",
       "generation",
       "creative"
     ],
-    "status": "pending",
-    "verified": null,
+    "status": "approved",
+    "verified": "2026-10-15",
     "score": null
   },
   {
