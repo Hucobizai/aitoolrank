@@ -175,15 +175,15 @@
     "url": "https://www.crewai.com/",
     "category": "AI Agents",
     "summary": "Framework and platform for multi-agent workflows.",
-    "pricing": "Pricing and usage limits require review",
+    "pricing": "Open-source framework; free cloud plan with usage limits; model/API costs may apply",
     "pricing_url": "https://www.crewai.com/",
     "tags": [
       "agents",
       "framework",
       "automation"
     ],
-    "status": "pending",
-    "verified": null,
+   "status": "approved",
+    "verified": "2026-10-15",
     "score": null
   },
   {
