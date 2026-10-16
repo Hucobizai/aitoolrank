@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://hucobizai.github.io/aitoolrank/</loc>
-  </url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/ollama/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/langgraph/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/continue/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/aider/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/comfyui/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/cursor/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/replit/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/github-copilot/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/bolt/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/lovable/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/crewai/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/dify/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/flowise/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/n8n/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/runway/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/pika/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/kling/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/luma/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/heygen/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/synthesia/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/elevenlabs/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/suno/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/perplexity/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/notebooklm/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/chatgpt/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/claude/</loc></url>
+  <url><loc>https://hucobizai.github.io/aitoolrank/tools/gemini/</loc></url>
 </urlset>
-
