@@ -253,5 +253,22 @@
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "url": "https://pika.art/",
+    "category": "AI Video",
+    "summary": "AI video creation platform.",
+    "pricing": "Free plan with 0 monthly credits (packs only); paid plans start at $10/month for 900 credits; higher tiers available",
+    "pricing_url": "https://pika.art/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
   }
 ]
