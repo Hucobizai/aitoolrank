@@ -185,5 +185,22 @@
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "url": "https://dify.ai/",
+    "category": "AI Agents",
+    "summary": "Platform for building AI applications and workflows.",
+    "pricing": "Free cloud Sandbox plan with usage limits; self-hosted Community Edition available; hosting and model/API costs may apply",
+    "pricing_url": "https://dify.ai/",
+    "tags": [
+      "agents",
+      "workflows",
+      "apps"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
   }
 ]
