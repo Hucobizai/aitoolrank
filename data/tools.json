@@ -466,8 +466,8 @@
     "name": "Google Gemini",
     "url": "https://gemini.google.com/",
     "category": "AI Assistants",
-    "summary": "Google's AI assistant for writing, research, coding, brainstorming, image creation, and working with information across Google apps.",
-    "pricing": "Free plan available; paid plans offer additional features and higher usage limits. Exact pricing requires verification.",
+    "summary": "Google's AI assistant for writing, research, coding, brainstorming, image creation, and working with information across Google apps.", 
+"pricing": "Free plan available; Google AI Plus $4.99/month; Google AI Pro $19.99/month; Google AI Ultra from $99.99/month, with a $199.99/month higher-usage tier. Features and availability vary by plan and region.",
     "pricing_url": "https://gemini.google/subscriptions/",
     "tags": [
       "assistant",
@@ -475,8 +475,9 @@
       "research",
       "coding"
     ],
-    "status": "pending",
-    "verified": null,
+    
+"status": "approved",
+"verified": "2026-10-16",
     "score": null
   }
 ]
