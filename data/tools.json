@@ -310,16 +310,16 @@
     "name": "Luma AI",
     "url": "https://lumalabs.ai/",
     "category": "AI Video",
-    "summary": "AI-powered visual and video creation tools.",
-    "pricing": "Pricing and usage limits require review",
+   "summary": "AI platform for generating and editing images and videos using text and image prompts.",
+"pricing": "Free access and generation limits may vary; paid plans and additional usage costs may apply. Check official pricing for current details.",
     "pricing_url": "https://lumalabs.ai/",
     "tags": [
       "video",
       "generation",
       "creative"
     ],
-    "status": "pending",
-    "verified": null,
+   "status": "approved",
+"verified": "2026-10-16",
     "score": null
   },
   {
