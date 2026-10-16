@@ -406,5 +406,23 @@
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com/",
+    "category": "AI Assistants",
+    "summary": "Conversational AI assistant for writing, research, brainstorming, coding, learning, and analyzing information.",
+    "pricing": "Free plan available; Go $8/month; Plus $20/month; Pro from $100/month with multiple usage tiers. Business and Enterprise plans also available. Prices and features may vary by region.",
+    "pricing_url": "https://chatgpt.com/pricing/",
+    "tags": [
+      "assistant",
+      "writing",
+      "research",
+      "coding"
+    ],
+    "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
   }
 ]
