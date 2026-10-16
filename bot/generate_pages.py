@@ -1,0 +1,119 @@
+
+"""Generate SEO-friendly pages for approved AI ToolRank listings."""
+
+import html
+import json
+import re
+from pathlib import Path
+from urllib.parse import quote
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "data" / "tools.json"
+OUTPUT = ROOT / "docs" / "tools"
+BASE_URL = "https://hucobizai.github.io/aitoolrank"
+
+
+def escape(value):
+    return html.escape(str(value or ""), quote=True)
+
+
+def generate_page(tool):
+    name = str(tool["name"])
+    slug = str(tool["id"])
+    category = str(tool["category"])
+    summary = str(tool["summary"])
+    pricing = str(tool.get("pricing") or "Check official pricing.")
+    website = str(tool["url"])
+    pricing_url = str(tool.get("pricing_url") or website)
+
+    canonical = f"{BASE_URL}/tools/{quote(slug)}/"
+    title = f"{name} - Features, Pricing & Overview | AI ToolRank"
+    description = f"Explore {name}: {summary}"[:155]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{escape(title)}</title>
+  <meta name="description" content="{escape(description)}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="{escape(canonical)}">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="../../">✦ AI ToolRank</a>
+      <a href="../../#about">How we evaluate</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">{escape(category)}</span>
+      <h1>{escape(name)}</h1>
+      <p>{escape(summary)}</p>
+    </section>
+
+    <section class="section">
+      <h2>About {escape(name)}</h2>
+      <p>{escape(summary)}</p>
+
+      <h2>Pricing</h2>
+      <p>{escape(pricing)}</p>
+
+      <p>
+        <a href="{escape(pricing_url)}"
+           target="_blank" rel="noopener noreferrer">
+          View official pricing ↗
+        </a>
+      </p>
+
+      <h2>Explore {escape(name)}</h2>
+      <p>
+        <a href="{escape(website)}"
+           target="_blank" rel="noopener noreferrer">
+          Visit official website ↗
+        </a>
+      </p>
+
+      <p class="muted fine">
+        Product details are based on published descriptions.
+        Features and prices may change. Verify with the provider.
+      </p>
+    </section>
+
+    <section class="section">
+      <a href="../../">← Browse all AI tools</a>
+    </section>
+  </main>
+</body>
+</html>
+"""
+
+
+def main():
+    tools = json.loads(SOURCE.read_text(encoding="utf-8"))
+    approved = [t for t in tools if t.get("status") == "approved"]
+
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    count = 0
+
+    for tool in approved:
+        slug = str(tool["id"])
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
+            raise ValueError(f"Unsafe tool ID: {slug}")
+
+        page_dir = OUTPUT / slug
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / "index.html").write_text(
+            generate_page(tool), encoding="utf-8"
+        )
+        count += 1
+
+    print(f"Generated {count} approved AI tool pages.")
+
+
+if __name__ == "__main__":
+    main()
