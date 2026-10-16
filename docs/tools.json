@@ -236,5 +236,22 @@
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com/",
+    "category": "AI Video",
+    "summary": "AI-powered video and creative generation platform.",
+    "pricing": "Free plan with limited credits; paid subscription plans available; video generation uses credits",
+    "pricing_url": "https://runwayml.com/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "approved",
+    "verified": "2026-10-15",
+    "score": null
   }
 ]
