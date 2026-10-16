@@ -270,5 +270,22 @@
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
+  },
+  {
+    "id": "kling",
+    "name": "Kling AI",
+    "url": "https://klingai.com/",
+    "category": "AI Video",
+    "summary": "AI video generation platform for creating videos from text prompts and images.",
+    "pricing": "Free access may include limited credits; paid plans offer additional generation credits and features. Check official pricing for current limits.",
+    "pricing_url": "https://klingai.com/",
+    "tags": [
+      "video",
+      "generation",
+      "creative"
+    ],
+    "status": "approved",
+    "verified": "2026-10-16",
+    "score": null
   }
 ]
