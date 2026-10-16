@@ -123,7 +123,29 @@ def main():
         )
         count += 1
 
+        # Generate a sitemap for the homepage and approved tool pages.
+    urls = [f"{BASE_URL}/"]
+
+    for tool in approved:
+        slug = str(tool["id"])
+        urls.append(f"{BASE_URL}/tools/{quote(slug)}/")
+
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(
+            f"  <url><loc>{html.escape(url)}</loc></url>\n"
+            for url in urls
+        )
+        + "</urlset>\n"
+    )
+
+    (ROOT / "docs" / "sitemap.xml").write_text(
+        sitemap, encoding="utf-8"
+    )
+
     print(f"Generated {count} approved AI tool pages.")
+    print(f"Generated sitemap with {len(urls)} URLs.")
 
 
 if __name__ == "__main__":
