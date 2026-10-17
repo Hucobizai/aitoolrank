@@ -1,5 +1,27 @@
 [
   {
+    "id": "GitHub releases: Ollama:tag:github.com,2008:Repository/658928958/v0.40.6",
+    "title": "v0.40.6",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.6",
+    "source": "GitHub releases: Ollama",
+    "category": "AI Agents",
+    "published": "2026-10-17T00:58:39Z",
+    "discovered": "2026-10-17",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
+    "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.41.3",
+    "title": "v0.41.3",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.41.3",
+    "source": "GitHub releases: ComfyUI",
+    "category": "AI Video",
+    "published": "2026-10-17T04:26:50Z",
+    "discovered": "2026-10-17",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
     "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.41.2",
     "title": "v0.41.2",
     "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.41.2",
