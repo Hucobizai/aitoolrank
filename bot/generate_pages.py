@@ -38,11 +38,11 @@ if isinstance(features, list) and features:
         )
         + "\n</ul>"
     )
-    canonical = f"{BASE_URL}/tools/{quote(slug)}/"
-    title = f"{name} - Features, Pricing & Overview | AI ToolRank"
-    description = f"Explore {name}: {summary}"[:155]
+canonical = f"{BASE_URL}tools/{quote(slug)}/"
+title = f"{name} - Features, Pricing & Overview | AI ToolRank"
+description = f"Explore {name}: {summary}"[:155]
 
-    return f"""<!doctype html>
+return f"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
