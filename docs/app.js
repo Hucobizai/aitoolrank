@@ -34,11 +34,14 @@ function render() {
 
   for (const t of matches) {
     const card = el('article', 'tool');
+       const detailsLink = el('a', '', 'Explore tool details →');
+    detailsLink.href = `tools/${encodeURIComponent(t.id)}/`;
     card.append(
       el('span', 'pill', t.category),
       el('h3', '', t.name),
       el('p', '', t.summary),
       el('div', 'price', t.pricing || 'Check vendor for pricing'),
+      detailsLink,
       linkTo(t, 'Visit official website ↗')
     );
     cards.append(card);
