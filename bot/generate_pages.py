@@ -59,7 +59,8 @@ def generate_page(tool):
     <section class="section">
       <h2>About {escape(name)}</h2>
       <p>{escape(summary)}</p>
-
+      <h2>Best For</h2>
+      <p>{escape(", ".join(tool.get("tags", [])) or "Explore this AI tool's capabilities.")}</p>
       <h2>Pricing</h2>
       <p>{escape(pricing)}</p>
 
