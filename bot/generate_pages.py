@@ -25,7 +25,19 @@ def generate_page(tool):
     pricing = str(tool.get("pricing") or "Check official pricing.")
     website = str(tool["url"])
     pricing_url = str(tool.get("pricing_url") or website)
+features = tool.get("features", [])
+features_html = ""
 
+if isinstance(features, list) and features:
+    features_html = (
+        "<h2>Key Features</h2>\n<ul>\n"
+        + "\n".join(
+            f"<li>{escape(feature)}</li>"
+            for feature in features
+            if isinstance(feature, str) and feature.strip()
+        )
+        + "\n</ul>"
+    )
     canonical = f"{BASE_URL}/tools/{quote(slug)}/"
     title = f"{name} - Features, Pricing & Overview | AI ToolRank"
     description = f"Explore {name}: {summary}"[:155]
@@ -61,6 +73,7 @@ def generate_page(tool):
       <p>{escape(summary)}</p>
       <h2>Best For</h2>
       <p>{escape(", ".join(tool.get("tags", [])) or "Explore this AI tool's capabilities.")}</p>
+      {features_html}
       <h2>Pricing</h2>
       <p>{escape(pricing)}</p>
 
