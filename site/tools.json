@@ -421,6 +421,13 @@
       "research",
       "coding"
     ],
+    "features": [
+      "Draft, rewrite, and summarize written content",
+      "Help write, explain, and debug code",
+      "Analyze uploaded documents and files",
+      "Answer questions and support research",
+      "Analyze data and help create charts"
+    ],
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
