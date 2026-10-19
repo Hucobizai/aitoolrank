@@ -1,5 +1,27 @@
 [
   {
+    "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.42.1",
+    "title": "v0.42.1",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1",
+    "source": "GitHub releases: ComfyUI",
+    "category": "AI Video",
+    "published": "2026-10-19T01:33:54Z",
+    "discovered": "2026-10-19",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
+    "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.42.0",
+    "title": "v0.42.0",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
+    "source": "GitHub releases: ComfyUI",
+    "category": "AI Video",
+    "published": "2026-10-18T22:10:38Z",
+    "discovered": "2026-10-19",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
     "id": "GitHub releases: Ollama:tag:github.com,2008:Repository/658928958/v0.40.7-rc0",
     "title": "v0.40.7",
     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7-rc0",
