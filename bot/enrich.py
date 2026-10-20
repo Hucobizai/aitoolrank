@@ -73,9 +73,7 @@ class PageTextParser(HTMLParser):
 
 
 def read_official_page(url):
-    parsed = urlparse(url)
-
-    if parsed.scheme != "https" or not parsed.hostname:
+        if not is_safe_public_url(url):
         return None
 
     try:
