@@ -19,6 +19,7 @@ jobs:
           python-version: '3.12'
       - run: python bot/research.py
       - run: python bot/enrich.py
+      - run: python bot/approve_enrichment.py
       - run: python bot/build.py
       - run: cp site/tools.json docs/tools.json
       - run: python bot/generate_pages.py
