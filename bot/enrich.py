@@ -186,6 +186,20 @@ CATEGORY_SUGGESTIONS = {
 
 def main():
     tools = json.loads(TOOLS_PATH.read_text(encoding="utf-8"))
+
+    previous_queue = []
+    if OUTPUT_PATH.exists():
+        previous_queue = json.loads(
+            OUTPUT_PATH.read_text(encoding="utf-8")
+        )
+
+    previous_approvals = {
+        item["id"]: item
+        for item in previous_queue
+        if item.get("review_status") == "approved"
+        and isinstance(item.get("id"), str)
+    }
+
     queue = []
 
     for tool in tools:
@@ -204,11 +218,22 @@ def main():
         category = tool.get("category", "")
         suggestions = CATEGORY_SUGGESTIONS.get(category, {})
 
-        proposed = {
+         proposed = {
             field: suggestions[field]
             for field in missing
             if field in suggestions
         }
+
+        previous = previous_approvals.get(tool["id"])
+
+        review_status = "pending"
+
+        if (
+            previous
+            and previous.get("proposed") == proposed
+            and previous.get("missing_fields") == missing
+        ):
+            review_status = "approved"
 
         queue.append({
             "id": tool["id"],
@@ -216,7 +241,7 @@ def main():
             "category": category,
             "missing_fields": missing,
             "proposed": proposed,
-            "review_status": "pending",
+            "review_status": review_status,
             "note": (
                 "Category-based suggestions only. "
                 "Verify each claim against the official provider "
