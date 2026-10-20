@@ -470,9 +470,23 @@
       "research",
       "coding"
     ],
+"features": [
+  "Draft, edit, and summarize written content",
+  "Help write, explain, and debug code",
+  "Analyze uploaded documents and files",
+  "Support research and complex reasoning",
+  "Create documents, reports, and interactive artifacts"
+],
+"best_for": [
+  "Writers and content creators",
+  "Software developers",
+  "Students and researchers",
+  "Business professionals",
+  "People working with complex documents and information"
+],
 "status": "approved",
 "verified": "2026-10-16",
-    "score": null
+"score": null
 
   },
   {
