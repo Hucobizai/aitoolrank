@@ -73,7 +73,7 @@ def generate_page(tool):
       <h2>About {escape(name)}</h2>
       <p>{escape(summary)}</p>
       <h2>Best For</h2>
-      <p>{escape(", ".join(tool.get("tags", [])) or "Explore this AI tool's capabilities.")}</p>
+      <p>Recommended for: {escape(", ".join(tag.replace("-", " ").title() for tag in tool.get("tags", []) if isinstance(tag, str)) or "Anyone exploring AI-powered tools.")}</p>      
       {features_html}
       <h2>Pricing</h2>
       <p>{escape(pricing)}</p>
