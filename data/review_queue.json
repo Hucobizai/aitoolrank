@@ -22,6 +22,17 @@
     "note": "Release announcement only; verify claims before publication."
   },
   {
+    "id": "GitHub releases: Ollama:tag:github.com,2008:Repository/658928958/v0.40.7-rc1",
+    "title": "v0.40.7-rc1: mlx: deduplicate CUDA runtime payloads (#17956)",
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7-rc1",
+    "source": "GitHub releases: Ollama",
+    "category": "AI Agents",
+    "published": "2026-10-20T21:15:15Z",
+    "discovered": "2026-10-20",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
     "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.42.1",
     "title": "v0.42.1",
     "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1",
