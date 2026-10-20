@@ -1,28 +1,5 @@
 [
   {
-    "id": "ollama",
-    "name": "Ollama",
-    "category": "AI Agents",
-    "missing_fields": [
-      "features",
-      "best_for"
-    ],
-    "proposed": {
-      "features": [
-        "Support AI-powered automation workflows",
-        "Help build or run AI-driven applications",
-        "Work with AI models or agent-based systems"
-      ],
-      "best_for": [
-        "AI developers",
-        "Automation specialists",
-        "Businesses exploring AI workflows"
-      ]
-    },
-    "review_status": "pending",
-    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
-  },
-  {
     "id": "langgraph",
     "name": "LangGraph",
     "category": "AI Agents",

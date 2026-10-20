@@ -12,6 +12,20 @@
       "models",
       "privacy"
     ],
+    "features": [
+      "Run supported AI models locally or use cloud models",
+      "Integrate AI models with desktop applications and coding agents",
+      "Build AI-powered applications using APIs",
+      "Access models for coding, vision, embeddings, and reasoning",
+      "Use Python and JavaScript libraries for application development"
+    ],
+    "best_for": [
+      "Developers building AI-powered applications",
+      "Users who want to run AI models locally",
+      "Developers integrating AI into coding workflows",
+      "Researchers experimenting with different AI models",
+      "Technical teams developing custom AI solutions"
+    ],
     "status": "approved",
     "verified": "2026-10-15",
     "score": null
