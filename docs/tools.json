@@ -428,6 +428,13 @@
       "Answer questions and support research",
       "Analyze data and help create charts"
     ],
+    "best_for": [
+      "Writers and content creators",
+      "Software developers",
+      "Students and researchers",
+      "Business professionals",
+      "People looking for a general-purpose AI assistant"
+    ],
     "status": "approved",
     "verified": "2026-10-16",
     "score": null
