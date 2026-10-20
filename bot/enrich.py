@@ -15,44 +15,82 @@ OUTPUT_PATH = ROOT / "data" / "enrichment_queue.json"
 
 # Suggestions are intentionally conservative and category-based.
 # They are starting points for human review, not verified product claims.
+
 CATEGORY_SUGGESTIONS = {
     "AI Assistants": {
         "features": [
-            "Answer questions and assist with everyday tasks",
-            "Help draft and revise written content",
-            "Support brainstorming and idea development",
+            "Answer questions and help explain information",
+            "Assist with drafting and editing content",
+            "Support brainstorming and research tasks",
+        ],
+        "best_for": [
+            "Writers and content creators",
+            "Students and researchers",
+            "Business professionals",
+        ],
+    },
+    "AI Agents": {
+        "features": [
+            "Support AI-powered automation workflows",
+            "Help build or run AI-driven applications",
+            "Work with AI models or agent-based systems",
+        ],
+        "best_for": [
+            "AI developers",
+            "Automation specialists",
+            "Businesses exploring AI workflows",
+        ],
+    },
+    "Vibe Coding": {
+        "features": [
+            "Assist with software development tasks",
+            "Support AI-powered code creation or editing",
+            "Help streamline application development",
+        ],
+        "best_for": [
+            "Software developers",
+            "Entrepreneurs building applications",
+            "People exploring AI-assisted coding",
+        ],
+    },
+    "AI Video": {
+        "features": [
+            "Support AI-powered video creation workflows",
+            "Assist with generating or editing visual content",
+            "Help produce creative media projects",
+        ],
+        "best_for": [
+            "Video creators",
+            "Marketing professionals",
+            "Content production teams",
+        ],
+    },
+    "AI Audio": {
+        "features": [
+            "Support AI-powered audio creation",
+            "Assist with producing or editing audio content",
+            "Help streamline audio production workflows",
+        ],
+        "best_for": [
+            "Podcasters and audio creators",
+            "Music and media producers",
+            "Content creators",
+        ],
+    },
+    "AI Research": {
+        "features": [
+            "Help explore and organize information",
+            "Support research and information analysis",
+            "Assist with summarizing research materials",
         ],
         "best_for": [
             "Students and researchers",
-            "Writers and content creators",
-            "Professionals exploring AI assistants",
-        ],
-    },
-    "AI Writing": {
-        "features": [
-            "Assist with drafting written content",
-            "Suggest revisions and improvements",
-            "Support content brainstorming",
-        ],
-        "best_for": [
-            "Writers and editors",
-            "Marketing professionals",
-            "Content creators",
-        ],
-    },
-    "AI Image Generation": {
-        "features": [
-            "Generate images from text prompts",
-            "Explore visual concepts",
-            "Support creative design workflows",
-        ],
-        "best_for": [
-            "Designers and illustrators",
-            "Content creators",
-            "Marketing teams",
+            "Business analysts",
+            "Professionals working with information",
         ],
     },
 }
+
 
 
 def main():
