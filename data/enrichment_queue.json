@@ -1,0 +1,313 @@
+[
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "category": "AI Agents",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "langgraph",
+    "name": "LangGraph",
+    "category": "AI Agents",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "continue",
+    "name": "Continue",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "comfyui",
+    "name": "ComfyUI",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "category": "Vibe Coding",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "category": "AI Agents",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "dify",
+    "name": "Dify",
+    "category": "AI Agents",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "flowise",
+    "name": "Flowise",
+    "category": "AI Agents",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "category": "AI Agents",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "kling",
+    "name": "Kling AI",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "luma",
+    "name": "Luma AI",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "category": "AI Video",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "AI Audio",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "category": "AI Audio",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "category": "AI Research",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "category": "AI Research",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {},
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  },
+  {
+    "id": "gemini",
+    "name": "Google Gemini",
+    "category": "AI Assistants",
+    "missing_fields": [
+      "features",
+      "best_for"
+    ],
+    "proposed": {
+      "features": [
+        "Answer questions and assist with everyday tasks",
+        "Help draft and revise written content",
+        "Support brainstorming and idea development"
+      ],
+      "best_for": [
+        "Students and researchers",
+        "Writers and content creators",
+        "Professionals exploring AI assistants"
+      ]
+    },
+    "review_status": "pending",
+    "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
+  }
+]
