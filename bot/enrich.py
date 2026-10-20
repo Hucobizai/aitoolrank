@@ -10,11 +10,46 @@ from datetime import datetime, timezone
 from pathlib import Path
 import re
 import urllib.request
+import ipaddress
+import socket
 from html.parser import HTMLParser
 from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS_PATH = ROOT / "data" / "tools.json"
 OUTPUT_PATH = ROOT / "data" / "enrichment_queue.json"
+
+def is_safe_public_url(url):
+    parsed = urlparse(url)
+
+    if parsed.scheme != "https":
+        return False
+
+    if not parsed.hostname:
+        return False
+
+    if parsed.username or parsed.password:
+        return False
+
+    if parsed.port not in (None, 443):
+        return False
+
+    try:
+        addresses = socket.getaddrinfo(
+            parsed.hostname,
+            443,
+            type=socket.SOCK_STREAM
+        )
+
+        for address in addresses:
+            ip = ipaddress.ip_address(address[4][0])
+
+            if not ip.is_global:
+                return False
+
+        return bool(addresses)
+
+    except (OSError, ValueError):
+        return False
 
 class PageTextParser(HTMLParser):
     def __init__(self):
