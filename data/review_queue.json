@@ -1,5 +1,16 @@
 [
   {
+    "id": "GitHub releases: LangGraph:tag:github.com,2008:Repository/676672661/cli==0.4.37",
+    "title": "langgraph-cli==0.4.37",
+    "url": "https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.37",
+    "source": "GitHub releases: LangGraph",
+    "category": "AI Agents",
+    "published": "2026-10-19T14:06:22Z",
+    "discovered": "2026-10-20",
+    "status": "pending",
+    "note": "Release announcement only; verify claims before publication."
+  },
+  {
     "id": "GitHub releases: ComfyUI:tag:github.com,2008:Repository/589831718/v0.42.1",
     "title": "v0.42.1",
     "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1",
