@@ -16,6 +16,58 @@ ROOT = Path(__file__).resolve().parents[1]
 TOOLS_PATH = ROOT / "data" / "tools.json"
 OUTPUT_PATH = ROOT / "data" / "enrichment_queue.json"
 
+class PageTextParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self.skip_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style", "noscript"):
+            self.skip_depth += 1
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style", "noscript"):
+            self.skip_depth = max(0, self.skip_depth - 1)
+
+    def handle_data(self, data):
+        if self.skip_depth == 0:
+            cleaned = re.sub(r"\s+", " ", data).strip()
+            if cleaned:
+                self.parts.append(cleaned)
+
+
+def read_official_page(url):
+    parsed = urlparse(url)
+
+    if parsed.scheme != "https" or not parsed.hostname:
+        return None
+
+    try:
+        request = urllib.request.Request(
+            url,
+            headers={"User-Agent": "AIToolRankResearch/0.1"}
+        )
+
+        with urllib.request.urlopen(request, timeout=10) as response:
+            content_type = response.headers.get("Content-Type", "")
+
+            if "text/html" not in content_type.lower():
+                return None
+
+            html = response.read(200_000).decode(
+                "utf-8", errors="replace"
+            )
+
+        parser = PageTextParser()
+        parser.feed(html)
+
+        return " ".join(parser.parts)[:8000]
+
+    except (OSError, ValueError):
+        return None
+
+
 # Suggestions are intentionally conservative and category-based.
 # They are starting points for human review, not verified product claims.
 
