@@ -71,7 +71,9 @@ class PageTextParser(HTMLParser):
             if cleaned:
                 self.parts.append(cleaned)
 
-
+class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
 def read_official_page(url):
         if not is_safe_public_url(url):
         return None
@@ -82,7 +84,8 @@ def read_official_page(url):
             headers={"User-Agent": "AIToolRankResearch/0.1"}
         )
 
-        with urllib.request.urlopen(request, timeout=10) as response:
+        opener = urllib.request.build_opener(NoRedirectHandler())
+        with opener.open(request, timeout=10) as response:
             content_type = response.headers.get("Content-Type", "")
 
             if "text/html" not in content_type.lower():
