@@ -75,7 +75,7 @@ class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         return None
 def read_official_page(url):
-        if not is_safe_public_url(url):
+    if not is_safe_public_url(url):
         return None
 
     try:
