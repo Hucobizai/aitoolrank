@@ -218,7 +218,7 @@ def main():
         category = tool.get("category", "")
         suggestions = CATEGORY_SUGGESTIONS.get(category, {})
 
-         proposed = {
+        proposed = {
             field: suggestions[field]
             for field in missing
             if field in suggestions
