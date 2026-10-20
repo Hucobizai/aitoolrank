@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python bot/research.py
+      - run: python bot/enrich.py
       - run: python bot/build.py
       - run: cp site/tools.json docs/tools.json
       - run: python bot/generate_pages.py
@@ -25,5 +26,5 @@ jobs:
         run: |
           git config user.name "aitoolrank-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/review_queue.json site/tools.json docs/tools.json docs/tools/ docs/sitemap.xml
+          git add data/review_queue.json data/enrichment_queue.json site/tools.json docs/tools.json docs/tools/ docs/sitemap.xml
           if ! git diff --cached --quiet; then git commit -m 'Update research review queue'; git push; fi
