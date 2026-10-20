@@ -8,7 +8,10 @@ Never changes approved tool records or published pages.
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-
+import re
+import urllib.request
+from html.parser import HTMLParser
+from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS_PATH = ROOT / "data" / "tools.json"
 OUTPUT_PATH = ROOT / "data" / "enrichment_queue.json"
