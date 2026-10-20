@@ -7,19 +7,19 @@
       "features",
       "best_for"
     ],
-  "proposed": {
-  "features": [
-    "Build stateful AI agent workflows using graph-based orchestration",
-    "Support durable execution and human-in-the-loop workflows",
-    "Coordinate multi-step and multi-agent AI applications"
-  ],
-  "best_for": [
-    "Developers building stateful AI agents",
-    "Teams developing complex AI workflows",
-    "AI engineers building multi-agent applications"
-  ]
-},
-    "review_status": "approved",
+    "proposed": {
+      "features": [
+        "Support AI-powered automation workflows",
+        "Help build or run AI-driven applications",
+        "Work with AI models or agent-based systems"
+      ],
+      "best_for": [
+        "AI developers",
+        "Automation specialists",
+        "Businesses exploring AI workflows"
+      ]
+    },
+    "review_status": "pending",
     "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
   },
   {
