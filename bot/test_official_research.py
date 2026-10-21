@@ -74,7 +74,12 @@ def main():
         parser = TextExtractor()
         parser.feed(html)
 
-        text = "\n".join(parser.parts)
+                useful_parts = [
+            part for part in parser.parts
+            if len(part.split()) >= 5
+        ]
+
+        text = "\n".join(useful_parts)
 
         print("Website:", url)
         print("Characters extracted:", len(text))
