@@ -117,7 +117,7 @@ def main():
 
         print("\nStructured evidence records:")
         print(json.dumps(evidence_records, indent=2))
-                feature_suggestions = []
+        feature_suggestions = []
 
         for record in evidence_records:
             if record["relevance"] != "high":
