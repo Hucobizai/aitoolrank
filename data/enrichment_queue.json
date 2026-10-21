@@ -9,17 +9,17 @@
     ],
    "proposed": {
   "features": [
-    "Provide AI coding assistance within supported development environments",
-    "Support customizable AI coding workflows and integrations",
-    "Work with configurable AI models for coding tasks"
-  ],
+  "Agent mode for AI-assisted software development tasks",
+  "Chat and Edit modes for understanding and modifying code",
+  "Inline code autocomplete and terminal-based AI coding assistance"
+],
   "best_for": [
     "Developers seeking customizable AI coding assistance",
     "Engineering teams integrating AI into development workflows",
     "Programmers who want flexibility in choosing AI models"
   ]
   },
-    "review_status": "pending",
+   "review_status": "approved",
     "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
   },
   {
