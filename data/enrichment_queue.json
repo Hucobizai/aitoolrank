@@ -7,18 +7,18 @@
       "features",
       "best_for"
     ],
-    "proposed": {
-      "features": [
-        "Assist with software development tasks",
-        "Support AI-powered code creation or editing",
-        "Help streamline application development"
-      ],
-      "best_for": [
-        "Software developers",
-        "Entrepreneurs building applications",
-        "People exploring AI-assisted coding"
-      ]
-    },
+   "proposed": {
+  "features": [
+    "Provide AI coding assistance within supported development environments",
+    "Support customizable AI coding workflows and integrations",
+    "Work with configurable AI models for coding tasks"
+  ],
+  "best_for": [
+    "Developers seeking customizable AI coding assistance",
+    "Engineering teams integrating AI into development workflows",
+    "Programmers who want flexibility in choosing AI models"
+  ]
+  },
     "review_status": "pending",
     "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
   },
