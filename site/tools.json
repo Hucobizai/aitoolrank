@@ -45,7 +45,17 @@
     ],
     "status": "approved",
     "verified": "2026-10-15",
-    "score": null
+    "score": null,
+    "features": [
+      "Build stateful AI agent workflows using graph-based orchestration",
+      "Support durable execution and human-in-the-loop workflows",
+      "Coordinate multi-step and multi-agent AI applications"
+    ],
+    "best_for": [
+      "Developers building stateful AI agents",
+      "Teams developing complex AI workflows",
+      "AI engineers building multi-agent applications"
+    ]
   },
   {
     "id": "continue",
