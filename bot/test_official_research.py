@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 from urllib.request import Request, build_opener, HTTPRedirectHandler
 from html.parser import HTMLParser
 import re
-
+import json
 
 class NoRedirects(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
@@ -84,13 +84,22 @@ def main():
         print("Website:", url)
         print("Characters extracted:", len(text))
         print("Preview:", text[:1000])
-        print("\nPotential feature evidence:")
 
         keywords = ("agent", "code", "development", "software")
 
+        evidence_records = []
+
         for part in useful_parts:
             if any(word in part.lower() for word in keywords):
-                print("-", part[:250])
+                evidence_records.append({
+                    "tool": "Cursor",
+                    "source_url": url,
+                    "evidence": part[:250],
+                    "review_status": "pending"
+                })
+
+        print("\nStructured evidence records:")
+        print(json.dumps(evidence_records, indent=2))
     except Exception as error:
         print("Website retrieval failed:", type(error).__name__)
 
