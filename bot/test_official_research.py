@@ -91,10 +91,27 @@ def main():
 
         for part in useful_parts:
             if any(word in part.lower() for word in keywords):
+                strong_phrases = (
+                    "agents turn",
+                    "coding agent",
+                    "accelerate development",
+                    "handing off tasks"
+                )
+
+                relevance = (
+                    "high"
+                    if any(
+                        phrase in part.lower()
+                        for phrase in strong_phrases
+                    )
+                    else "low"
+                )
+
                 evidence_records.append({
                     "tool": "Cursor",
                     "source_url": url,
                     "evidence": part[:250],
+                    "relevance": relevance,
                     "review_status": "pending"
                 })
 
