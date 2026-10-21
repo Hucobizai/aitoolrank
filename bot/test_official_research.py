@@ -45,8 +45,10 @@ def main():
     )
 
     opener = build_opener(NoRedirects())
-       print("Research test configured for:", url)
+
+    print("Research test configured for:", url)
     print("Attempting read-only retrieval from Cursor")
+
     try:
         with opener.open(request, timeout=10) as response:
             content_type = response.headers.get("Content-Type", "")
