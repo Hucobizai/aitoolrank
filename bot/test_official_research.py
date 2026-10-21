@@ -74,7 +74,7 @@ def main():
         parser = TextExtractor()
         parser.feed(html)
 
-                useful_parts = [
+        useful_parts = [
             part for part in parser.parts
             if len(part.split()) >= 5
         ]
