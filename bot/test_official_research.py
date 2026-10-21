@@ -84,7 +84,13 @@ def main():
         print("Website:", url)
         print("Characters extracted:", len(text))
         print("Preview:", text[:1000])
+        print("\nPotential feature evidence:")
 
+        keywords = ("agent", "code", "development", "software")
+
+        for part in useful_parts:
+            if any(word in part.lower() for word in keywords):
+                print("-", part[:250])
     except Exception as error:
         print("Website retrieval failed:", type(error).__name__)
 
