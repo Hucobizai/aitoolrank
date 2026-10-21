@@ -217,7 +217,18 @@ def main():
 
         category = tool.get("category", "")
         suggestions = CATEGORY_SUGGESTIONS.get(category, {})
+        official_url = tool.get("url", "")
+       official_text = None  # Website retrieval disabled until safety checks are strengthened
 
+        if official_text:
+            print(
+                f"Official website text retrieved for {tool['name']}: "
+                f"{len(official_text)} characters"
+            )
+        else:
+            print(
+                f"Official website text unavailable for {tool['name']}"
+            )
         proposed = {
             field: suggestions[field]
             for field in missing
