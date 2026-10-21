@@ -15,22 +15,32 @@ class TextExtractor(HTMLParser):
     def __init__(self):
         super().__init__()
         self.parts = []
-        self.skip = 0
+        self.skip_stack = []
+        self.content_depth = 0
 
     def handle_starttag(self, tag, attrs):
-        if tag in ("script", "style", "noscript"):
-            self.skip += 1
+        if tag in ("script", "style", "noscript", "nav", "footer"):
+            self.skip_stack.append(tag)
+
+        if tag in ("main", "article"):
+            self.content_depth += 1
 
     def handle_endtag(self, tag):
-        if tag in ("script", "style", "noscript"):
-            self.skip = max(0, self.skip - 1)
+        if self.skip_stack and self.skip_stack[-1] == tag:
+            self.skip_stack.pop()
+
+        if tag in ("main", "article"):
+            self.content_depth = max(0, self.content_depth - 1)
 
     def handle_data(self, data):
-        if self.skip == 0:
+        if self.skip_stack:
+            return
+
+        if self.content_depth > 0:
             value = re.sub(r"\s+", " ", data).strip()
+
             if value:
                 self.parts.append(value)
-
 
 def main():
     url = "https://cursor.com/"
