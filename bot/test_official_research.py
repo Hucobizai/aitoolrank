@@ -117,6 +117,33 @@ def main():
 
         print("\nStructured evidence records:")
         print(json.dumps(evidence_records, indent=2))
+                feature_suggestions = []
+
+        for record in evidence_records:
+            if record["relevance"] != "high":
+                continue
+
+            evidence = record["evidence"].lower()
+
+            if "coding agent" in evidence:
+                suggestion = "AI coding agent for software development"
+            elif "agents turn" in evidence:
+                suggestion = "AI agents that help turn ideas into code"
+            elif "handing off tasks" in evidence:
+                suggestion = "Delegate development tasks to AI agents"
+            else:
+                continue
+
+            feature_suggestions.append({
+                "tool": record["tool"],
+                "suggested_feature": suggestion,
+                "source_url": record["source_url"],
+                "supporting_evidence": record["evidence"],
+                "review_status": "pending"
+            })
+
+        print("\nDraft feature suggestions:")
+        print(json.dumps(feature_suggestions, indent=2))
     except Exception as error:
         print("Website retrieval failed:", type(error).__name__)
 
