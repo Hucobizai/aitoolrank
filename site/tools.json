@@ -45,17 +45,7 @@
     ],
     "status": "approved",
     "verified": "2026-10-15",
-    "score": null,
-    "features": [
-      "Build stateful AI agent workflows using graph-based orchestration",
-      "Support durable execution and human-in-the-loop workflows",
-      "Coordinate multi-step and multi-agent AI applications"
-    ],
-    "best_for": [
-      "Developers building stateful AI agents",
-      "Teams developing complex AI workflows",
-      "AI engineers building multi-agent applications"
-    ]
+    "score": null
   },
   {
     "id": "continue",
@@ -72,7 +62,17 @@
     ],
     "status": "approved",
     "verified": "2026-10-15",
-    "score": null
+    "score": null,
+    "features": [
+      "Agent mode for AI-assisted software development tasks",
+      "Chat and Edit modes for understanding and modifying code",
+      "Inline code autocomplete and terminal-based AI coding assistance"
+    ],
+    "best_for": [
+      "Developers seeking customizable AI coding assistance",
+      "Engineering teams integrating AI into development workflows",
+      "Programmers who want flexibility in choosing AI models"
+    ]
   },
   {
     "id": "aider",

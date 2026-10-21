@@ -1,25 +1,25 @@
 [
   {
-    "id": "continue",
-    "name": "Continue",
-    "category": "Vibe Coding",
+    "id": "langgraph",
+    "name": "LangGraph",
+    "category": "AI Agents",
     "missing_fields": [
       "features",
       "best_for"
     ],
-   "proposed": {
-  "features": [
-  "Agent mode for AI-assisted software development tasks",
-  "Chat and Edit modes for understanding and modifying code",
-  "Inline code autocomplete and terminal-based AI coding assistance"
-],
-  "best_for": [
-    "Developers seeking customizable AI coding assistance",
-    "Engineering teams integrating AI into development workflows",
-    "Programmers who want flexibility in choosing AI models"
-  ]
-  },
-   "review_status": "approved",
+    "proposed": {
+      "features": [
+        "Support AI-powered automation workflows",
+        "Help build or run AI-driven applications",
+        "Work with AI models or agent-based systems"
+      ],
+      "best_for": [
+        "AI developers",
+        "Automation specialists",
+        "Businesses exploring AI workflows"
+      ]
+    },
+    "review_status": "pending",
     "note": "Category-based suggestions only. Verify each claim against the official provider before approving or publishing."
   },
   {
