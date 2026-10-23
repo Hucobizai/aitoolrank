@@ -114,6 +114,19 @@ class PinnedHTTPSConnection(http.client.HTTPSConnection):
         except Exception:
             raw_socket.close()
             raise
+def create_verified_connection(url):
+    """Create an HTTPS connection using a validated public IP."""
+    verified_ips = get_verified_public_ips(url)
+
+    if not verified_ips:
+        return None
+
+    hostname = urlsplit(url).hostname
+
+    return PinnedHTTPSConnection(
+        hostname,
+        verified_ips[0],
+    )
 def fetch_official_page(url):
     """Return extracted website text, or None when unavailable."""
     verified_ips = get_verified_public_ips(url)
