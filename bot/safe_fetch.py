@@ -127,12 +127,18 @@ def create_verified_connection(url):
         hostname,
         verified_ips[0],
     )
+
+
 def fetch_official_page(url):
     """Return extracted website text, or None when unavailable."""
-    verified_ips = get_verified_public_ips(url)
+    try:
+        verified_ips = get_verified_public_ips(url)
 
-    if not verified_ips:
+        if not verified_ips:
+            return None
+
+        # Network retrieval is intentionally disabled.
         return None
 
-    # Network retrieval is intentionally disabled.
-    return None
+    except (OSError, ValueError, TimeoutError):
+        return None
