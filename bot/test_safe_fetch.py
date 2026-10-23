@@ -7,6 +7,7 @@ from safe_fetch import (
     create_verified_connection,
     fetch_official_page,
     PinnedHTTPSConnection,
+    extract_website_text,
 )
 
 
@@ -198,5 +199,33 @@ def main():
             assert result is None
 
     print("PASS: Timeout and validation errors handled safely")
+    print("\nTesting HTML text extraction...")
+
+    sample_html = """
+    <html>
+      <head>
+        <title>Cursor AI</title>
+        <script>ignore_script()</script>
+      </head>
+      <body>
+        <nav>Navigation Menu</nav>
+        <main>
+          <h1>Cursor AI Coding Assistant</h1>
+          <p>Build software with AI agents.</p>
+        </main>
+        <footer>Footer Links</footer>
+      </body>
+    </html>
+    """
+
+    extracted = extract_website_text(sample_html)
+
+    assert "Cursor AI Coding Assistant" in extracted
+    assert "Build software with AI agents." in extracted
+    assert "ignore_script" not in extracted
+    assert "Navigation Menu" not in extracted
+    assert "Footer Links" not in extracted
+
+    print("PASS: HTML text extraction")
 if __name__ == "__main__":
     main()
