@@ -116,7 +116,9 @@ class PinnedHTTPSConnection(http.client.HTTPSConnection):
             raise
 def fetch_official_page(url):
     """Return extracted website text, or None when unavailable."""
-    if not has_public_dns(url):
+        verified_ips = get_verified_public_ips(url)
+
+    if not verified_ips:
         return None
 
     # Network retrieval is intentionally disabled.
