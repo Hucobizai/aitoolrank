@@ -1,5 +1,5 @@
 """Read-only test of official AI tool website research."""
-
+from safe_fetch import fetch_official_page
 from urllib.parse import urlparse
 from urllib.request import Request, build_opener, HTTPRedirectHandler
 from html.parser import HTMLParser
@@ -49,38 +49,23 @@ def main():
     if parsed.scheme != "https" or parsed.hostname != "cursor.com":
         raise ValueError("Unexpected research URL")
 
-    request = Request(
-        url,
-        headers={"User-Agent": "AIToolRankResearch/0.1"}
-    )
-
-    opener = build_opener(NoRedirects())
-
-    print("Research test configured for:", url)
-    print("Attempting read-only retrieval from Cursor")
+        print("Research test configured for:", url)
+    print("Attempting safe read-only retrieval from Cursor")
 
     try:
-        with opener.open(request, timeout=10) as response:
-            content_type = response.headers.get("Content-Type", "")
+        text = fetch_official_page(url)
 
-            if "text/html" not in content_type.lower():
-                print("Website did not return HTML")
-                return
+        if not text:
+            print("Website retrieval unavailable")
+            return
 
-            html = response.read(100_000).decode(
-                "utf-8", errors="replace"
-            )
-
-        parser = TextExtractor()
-        parser.feed(html)
-
-        useful_parts = [
-            part for part in parser.parts
-            if len(part.split()) >= 5
+               useful_parts = [
+            sentence.strip()
+            for sentence in re.split(r"(?<=[.!?])\s+", text)
+            if len(sentence.split()) >= 5
         ]
 
         text = "\n".join(useful_parts)
-
         print("Website:", url)
         print("Characters extracted:", len(text))
         print("Preview:", text[:1000])
