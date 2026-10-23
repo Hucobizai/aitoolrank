@@ -6,7 +6,8 @@ Network retrieval remains disabled until security testing.
 from urllib.parse import urlsplit
 import ipaddress
 import socket
-
+import http.client
+import ssl
 def is_allowed_url(url):
     """Accept only standard HTTPS website URLs."""
     if not isinstance(url, str):
