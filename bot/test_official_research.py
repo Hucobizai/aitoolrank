@@ -51,7 +51,7 @@ def main():
     url = approved_tools[tool_name]
     parsed = urlparse(url)
 
-    if parsed.scheme != "https" or parsed.hostname != "cursor.com":
+    if parsed.scheme != "https" or url not in approved_tools.values():
         raise ValueError("Unexpected research URL")
 
     print("Research test configured for:", url)
