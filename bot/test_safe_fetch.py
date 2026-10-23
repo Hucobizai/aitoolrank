@@ -105,31 +105,7 @@ def main():
         assert result == []
 
     print("PASS: Private IP addresses rejected")
-    print("\nTesting retrieval with validated IP results...")
-
-    with patch(
-        "safe_fetch.get_verified_public_ips",
-        return_value=["8.8.8.8"],
-    ) as mock_verified:
-        result = fetch_official_page("https://cursor.com/")
-
-        assert result is None
-        mock_verified.assert_called_once_with("https://cursor.com/")
-
-    print("PASS: Retrieval uses validated IP results")
-    print("\nTesting that network retrieval stays disabled...")
-
-    with patch(
-        "safe_fetch.get_verified_public_ips",
-        return_value=["8.8.8.8"],
-    ):
-        with patch.object(PinnedHTTPSConnection, "connect") as mock_connect:
-            result = fetch_official_page("https://cursor.com/")
-
-            assert result is None
-            mock_connect.assert_not_called()
-
-    print("PASS: Network retrieval remains disabled")
+    
     print("\nTesting verified HTTPS connection helper...")
 
     with patch(
@@ -227,5 +203,38 @@ def main():
     assert "Footer Links" not in extracted
 
     print("PASS: HTML text extraction")
+    print("\nTesting simulated HTTPS website retrieval...")
+
+    def check_response(status, content_type, body):
+        mock_response = MagicMock()
+        mock_response.status = status
+        mock_response.getheader.return_value = content_type
+        mock_response.read.return_value = body
+
+        mock_connection = MagicMock()
+        mock_connection.getresponse.return_value = mock_response
+
+        with patch(
+            "safe_fetch.create_verified_connection",
+            return_value=mock_connection,
+        ):
+            result = fetch_official_page("https://cursor.com/")
+
+        mock_connection.close.assert_called_once()
+        return result
+
+    html = b"<html><main><h1>Cursor AI Coding Assistant</h1></main></html>"
+
+    result = check_response(200, "text/html", html)
+    assert "Cursor AI Coding Assistant" in result
+    print("PASS: Successful HTML retrieval")
+
+    result = check_response(302, "text/html", html)
+    assert result is None
+    print("PASS: Redirect rejected")
+
+    result = check_response(200, "text/html", b"x" * (1024 * 1024 + 1))
+    assert result is None
+    print("PASS: Oversized response rejected")
 if __name__ == "__main__":
     main()
