@@ -1,6 +1,11 @@
 """Tests for AI ToolRank's safe URL validation."""
 
-from safe_fetch import is_allowed_url, has_public_dns, fetch_official_page
+from safe_fetch import (
+    is_allowed_url,
+    has_public_dns,
+    fetch_official_page,
+    PinnedHTTPSConnection,
+)
 
 
 def main():
@@ -40,6 +45,21 @@ def main():
     print("PASS: localhost retrieval blocked")
 
     print("All DNS security tests passed.")
+    print("\nTesting pinned HTTPS configuration...")
 
+    connection = PinnedHTTPSConnection(
+        "cursor.com",
+        "1.1.1.1",
+    )
+
+    assert connection.host == "cursor.com"
+    assert connection.verified_ip == "1.1.1.1"
+    assert connection.port == 443
+    assert connection._context.verify_mode == 2
+    assert connection._context.check_hostname is True
+
+    connection.close()
+
+    print("PASS: HTTPS connection configuration")
 if __name__ == "__main__":
     main()
