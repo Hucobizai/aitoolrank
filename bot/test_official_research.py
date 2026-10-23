@@ -73,7 +73,7 @@ def main():
         keywords = ("agent", "code", "development", "software")
 
         evidence_records = []
-
+        seen_evidence = set()
         for part in useful_parts:
             if any(word in part.lower() for word in keywords):
                 strong_phrases = (
@@ -91,7 +91,10 @@ def main():
                     )
                     else "low"
                 )
+                if part in seen_evidence:
+                    continue
 
+                seen_evidence.add(part)
                 evidence_records.append({
                     "tool": "Cursor",
                     "source_url": url,
