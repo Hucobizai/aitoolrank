@@ -54,6 +54,32 @@ def has_public_dns(url):
 
     except (OSError, ValueError):
         return False
+class PinnedHTTPSConnection(http.client.HTTPSConnection):
+    """Connect to a specific IP while verifying the original hostname."""
+
+    def __init__(self, hostname, verified_ip, timeout=10):
+        super().__init__(
+            hostname,
+            port=443,
+            timeout=timeout,
+            context=ssl.create_default_context(),
+        )
+        self.verified_ip = verified_ip
+
+    def connect(self):
+        raw_socket = socket.create_connection(
+            (self.verified_ip, self.port),
+            self.timeout,
+        )
+
+        try:
+            self.sock = self._context.wrap_socket(
+                raw_socket,
+                server_hostname=self.host,
+            )
+        except Exception:
+            raw_socket.close()
+            raise
 def fetch_official_page(url):
     """Return extracted website text, or None when unavailable."""
     if not has_public_dns(url):
