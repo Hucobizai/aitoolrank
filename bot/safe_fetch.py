@@ -132,18 +132,56 @@ def create_verified_connection(url):
 
 
 def fetch_official_page(url):
-    """Return extracted website text, or None when unavailable."""
-    try:
-        verified_ips = get_verified_public_ips(url)
+    """Safely retrieve readable HTML from an official website."""
+    connection = None
 
-        if not verified_ips:
+    try:
+        if not is_allowed_url(url):
             return None
 
-        # Network retrieval is intentionally disabled.
+        connection = create_verified_connection(url)
+        if connection is None:
+            return None
+
+        parsed = urlsplit(url)
+        path = parsed.path or "/"
+        if parsed.query:
+            path += "?" + parsed.query
+
+        connection.request(
+            "GET",
+            path,
+            headers={
+                "User-Agent": "AIToolRankResearch/1.0",
+                "Accept": "text/html",
+                "Connection": "close",
+            },
+        )
+
+        response = connection.getresponse()
+
+        if response.status != 200:
+            return None
+
+        content_type = response.getheader("Content-Type", "")
+        if not content_type.lower().split(";")[0].strip() == "text/html":
+            return None
+
+        max_bytes = 1024 * 1024
+        content = response.read(max_bytes + 1)
+
+        if len(content) > max_bytes:
+            return None
+
+        html = content.decode("utf-8", errors="replace")
+        return extract_website_text(html)
+
+    except (OSError, ValueError, TimeoutError, http.client.HTTPException):
         return None
 
-    except (OSError, ValueError, TimeoutError):
-        return None
+    finally:
+        if connection is not None:
+            connection.close()
 
 class WebsiteTextExtractor(HTMLParser):
     """Extract readable text from website HTML."""
