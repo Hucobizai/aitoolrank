@@ -145,5 +145,17 @@ def main():
         connection.close()
 
     print("PASS: Verified HTTPS connection helper")
+    print("\nTesting connection rejection without verified IPs...")
+
+    with patch(
+        "safe_fetch.get_verified_public_ips",
+        return_value=[],
+    ) as mock_verified:
+        connection = create_verified_connection("https://cursor.com/")
+
+        assert connection is None
+        mock_verified.assert_called_once_with("https://cursor.com/")
+
+    print("PASS: Connection rejected without verified IPs")
 if __name__ == "__main__":
     main()
