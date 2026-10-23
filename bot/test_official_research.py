@@ -43,8 +43,12 @@ class TextExtractor(HTMLParser):
                 self.parts.append(value)
 
 def main():
+    approved_tools = {
+        "Cursor": "https://cursor.com/"
+    }
+
     tool_name = "Cursor"
-    url = "https://cursor.com/"
+    url = approved_tools[tool_name]
     parsed = urlparse(url)
 
     if parsed.scheme != "https" or parsed.hostname != "cursor.com":
