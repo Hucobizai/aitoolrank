@@ -173,5 +173,16 @@ def main():
             raise AssertionError("Connection failure was not detected")
         finally:
             connection.close()
+    print("\nTesting website retrieval error handling...")
+
+    with patch(
+        "safe_fetch.get_verified_public_ips",
+        side_effect=OSError("Simulated DNS failure"),
+    ):
+        result = fetch_official_page("https://cursor.com/")
+
+        assert result is None
+
+    print("PASS: Website retrieval handles DNS errors safely")
 if __name__ == "__main__":
     main()
