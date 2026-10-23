@@ -3,6 +3,7 @@ from unittest.mock import patch, MagicMock
 from safe_fetch import (
     is_allowed_url,
     has_public_dns,
+    get_verified_public_ips,
     fetch_official_page,
     PinnedHTTPSConnection,
 )
@@ -80,5 +81,27 @@ def main():
     connection.close()
 
     print("PASS: Pinned IP and TLS hostname verification")
+    print("\nTesting verified public IP retrieval...")
+
+    fake_dns = [
+        (2, 1, 6, "", ("8.8.8.8", 443)),
+        (2, 1, 6, "", ("1.1.1.1", 443)),
+    ]
+
+    with patch("safe_fetch.socket.getaddrinfo", return_value=fake_dns):
+        result = get_verified_public_ips("https://cursor.com/")
+        assert result == ["8.8.8.8", "1.1.1.1"]
+
+    print("PASS: Public IP addresses accepted")
+
+    private_dns = [
+        (2, 1, 6, "", ("192.168.1.1", 443)),
+    ]
+
+    with patch("safe_fetch.socket.getaddrinfo", return_value=private_dns):
+        result = get_verified_public_ips("https://cursor.com/")
+        assert result == []
+
+    print("PASS: Private IP addresses rejected")
 if __name__ == "__main__":
     main()
