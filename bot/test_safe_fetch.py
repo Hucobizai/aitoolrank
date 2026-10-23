@@ -157,5 +157,21 @@ def main():
         mock_verified.assert_called_once_with("https://cursor.com/")
 
     print("PASS: Connection rejected without verified IPs")
+    print("\nTesting HTTPS connection failure handling...")
+
+    connection = PinnedHTTPSConnection("cursor.com", "8.8.8.8")
+
+    with patch(
+        "safe_fetch.socket.create_connection",
+        side_effect=OSError("Simulated connection failure"),
+    ):
+        try:
+            connection.connect()
+        except OSError:
+            print("PASS: HTTPS connection failure detected")
+        else:
+            raise AssertionError("Connection failure was not detected")
+        finally:
+            connection.close()
 if __name__ == "__main__":
     main()
