@@ -103,7 +103,7 @@ def main():
         print("\nStructured evidence records:")
         print(json.dumps(evidence_records, indent=2))
         feature_suggestions = []
-
+        seen_features = set()
         for record in evidence_records:
             if record["relevance"] != "high":
                 continue
@@ -118,7 +118,10 @@ def main():
                 suggestion = "Delegate development tasks to AI agents"
             else:
                 continue
+            if suggestion in seen_features:
+                continue
 
+            seen_features.add(suggestion)
             feature_suggestions.append({
                 "tool": record["tool"],
                 "suggested_feature": suggestion,
