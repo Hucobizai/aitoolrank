@@ -62,7 +62,8 @@ def main():
         text = fetch_official_page(url)
 
         if not text:
-            print("Website retrieval unavailable")
+            print("Website retrieval unavailable for:", tool_name)
+            print("Research status: skipped")
             return
 
         useful_parts = [
