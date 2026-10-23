@@ -49,7 +49,7 @@ def main():
     if parsed.scheme != "https" or parsed.hostname != "cursor.com":
         raise ValueError("Unexpected research URL")
 
-        print("Research test configured for:", url)
+    print("Research test configured for:", url)
     print("Attempting safe read-only retrieval from Cursor")
 
     try:
@@ -59,7 +59,7 @@ def main():
             print("Website retrieval unavailable")
             return
 
-               useful_parts = [
+        useful_parts = [
             sentence.strip()
             for sentence in re.split(r"(?<=[.!?])\s+", text)
             if len(sentence.split()) >= 5
