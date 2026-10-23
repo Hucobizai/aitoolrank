@@ -99,7 +99,7 @@ def main():
 
                 seen_evidence.add(part)
                 evidence_records.append({
-                    "tool": "Cursor",
+                    "tool": tool_name,
                     "source_url": url,
                     "evidence": part[:250],
                     "relevance": relevance,
