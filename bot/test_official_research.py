@@ -44,7 +44,8 @@ class TextExtractor(HTMLParser):
 
 def main():
     approved_tools = {
-        "Cursor": "https://cursor.com/"
+        "Cursor": "https://cursor.com/",
+        "ChatGPT": "https://chatgpt.com/"
     }
 
     tool_name = "Cursor"
