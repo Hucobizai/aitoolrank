@@ -43,6 +43,7 @@ class TextExtractor(HTMLParser):
                 self.parts.append(value)
 
 def main():
+    tool_name = "Cursor"
     url = "https://cursor.com/"
     parsed = urlparse(url)
 
@@ -50,7 +51,7 @@ def main():
         raise ValueError("Unexpected research URL")
 
     print("Research test configured for:", url)
-    print("Attempting safe read-only retrieval from Cursor")
+    print("Attempting safe read-only retrieval from", tool_name)
 
     try:
         text = fetch_official_page(url)
