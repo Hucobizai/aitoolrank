@@ -80,10 +80,9 @@ def main():
 
             if any(word in part.lower() for word in keywords):
                 strong_phrases = (
-                    "agents turn",
-                    "coding agent",
-                    "accelerate development",
-                    "handing off tasks"
+                    "agents turn ideas into code",
+                    "coding agent for building",
+                    "accelerate development by handing off tasks"
                 )
 
                 relevance = (
