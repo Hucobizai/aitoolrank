@@ -129,7 +129,7 @@ def main():
             mock_connect.assert_not_called()
 
     print("PASS: Network retrieval remains disabled")
-        print("\nTesting verified HTTPS connection helper...")
+    print("\nTesting verified HTTPS connection helper...")
 
     with patch(
         "safe_fetch.get_verified_public_ips",
