@@ -184,5 +184,19 @@ def main():
         assert result is None
 
     print("PASS: Website retrieval handles DNS errors safely")
+    print("\nTesting timeout and validation errors...")
+
+    for error in (
+        TimeoutError("Simulated timeout"),
+        ValueError("Simulated validation error"),
+    ):
+        with patch(
+            "safe_fetch.get_verified_public_ips",
+            side_effect=error,
+        ):
+            result = fetch_official_page("https://cursor.com/")
+            assert result is None
+
+    print("PASS: Timeout and validation errors handled safely")
 if __name__ == "__main__":
     main()
