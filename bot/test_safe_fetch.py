@@ -1,6 +1,6 @@
 """Tests for AI ToolRank's safe URL validation."""
 
-from safe_fetch import is_allowed_url, fetch_official_page
+from safe_fetch import is_allowed_url, has_public_dns, fetch_official_page
 
 
 def main():
@@ -22,7 +22,24 @@ def main():
         print(f"PASS: {url}")
 
     print("All URL validation tests passed.")
+    print("\nTesting DNS security...")
 
+    assert has_public_dns("https://localhost/") is False
+    print("PASS: localhost rejected")
+
+    assert has_public_dns("https://127.0.0.1/") is False
+    print("PASS: loopback IP rejected")
+
+    assert has_public_dns("https://192.168.1.1/") is False
+    print("PASS: private IP rejected")
+
+    assert has_public_dns("https://example.local/") is False
+    print("PASS: local domain rejected")
+
+    assert fetch_official_page("https://localhost/") is None
+    print("PASS: localhost retrieval blocked")
+
+    print("All DNS security tests passed.")
 
 if __name__ == "__main__":
     main()
