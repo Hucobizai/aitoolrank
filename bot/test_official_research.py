@@ -75,6 +75,9 @@ def main():
         evidence_records = []
         seen_evidence = set()
         for part in useful_parts:
+            if "This element contains an interactive demo" in part:
+                continue
+
             if any(word in part.lower() for word in keywords):
                 strong_phrases = (
                     "agents turn",
