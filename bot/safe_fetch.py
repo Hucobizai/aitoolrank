@@ -54,6 +54,40 @@ def has_public_dns(url):
 
     except (OSError, ValueError):
         return False
+def get_verified_public_ips(url):
+    """Return public IP addresses, or an empty list if validation fails."""
+    if not is_allowed_url(url):
+        return []
+
+    try:
+        hostname = urlsplit(url).hostname
+
+        addresses = socket.getaddrinfo(
+            hostname,
+            443,
+            type=socket.SOCK_STREAM,
+        )
+
+        if not addresses:
+            return []
+
+        verified_ips = []
+
+        for address in addresses:
+            ip = ipaddress.ip_address(address[4][0])
+
+            if not ip.is_global:
+                return []
+
+            ip_text = str(ip)
+
+            if ip_text not in verified_ips:
+                verified_ips.append(ip_text)
+
+        return verified_ips
+
+    except (OSError, ValueError):
+        return []
 class PinnedHTTPSConnection(http.client.HTTPSConnection):
     """Connect to a specific IP while verifying the original hostname."""
 
