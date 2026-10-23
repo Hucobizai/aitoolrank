@@ -48,7 +48,7 @@ def main():
         "ChatGPT": "https://chatgpt.com/"
     }
 
-    tool_name = "Cursor"
+    tool_name = "ChatGPT"
     url = approved_tools[tool_name]
     parsed = urlparse(url)
 
