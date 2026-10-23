@@ -115,5 +115,18 @@ def main():
         mock_verified.assert_called_once_with("https://cursor.com/")
 
     print("PASS: Retrieval uses validated IP results")
+    print("\nTesting that network retrieval stays disabled...")
+
+    with patch(
+        "safe_fetch.get_verified_public_ips",
+        return_value=["8.8.8.8"],
+    ):
+        with patch.object(PinnedHTTPSConnection, "connect") as mock_connect:
+            result = fetch_official_page("https://cursor.com/")
+
+            assert result is None
+            mock_connect.assert_not_called()
+
+    print("PASS: Network retrieval remains disabled")
 if __name__ == "__main__":
     main()
