@@ -161,6 +161,7 @@ def fetch_official_page(url):
         response = connection.getresponse()
 
         if response.status != 200:
+            print("Website returned HTTP status:", response.status)
             return None
 
         content_type = response.getheader("Content-Type", "")
