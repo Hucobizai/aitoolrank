@@ -8,6 +8,8 @@ import ipaddress
 import socket
 import http.client
 import ssl
+from html.parser import HTMLParser
+from urllib.parse import urljoin
 def is_allowed_url(url):
     """Accept only standard HTTPS website URLs."""
     if not isinstance(url, str):
