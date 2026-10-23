@@ -144,3 +144,39 @@ def fetch_official_page(url):
 
     except (OSError, ValueError, TimeoutError):
         return None
+
+class WebsiteTextExtractor(HTMLParser):
+    """Extract readable text from website HTML."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.skip_depth = 0
+        self.skip_tags = {
+            "script", "style", "noscript",
+            "nav", "footer", "header",
+            "svg", "form",
+        }
+
+    def handle_starttag(self, tag, attrs):
+        if self.skip_depth:
+            self.skip_depth += 1
+        elif tag in self.skip_tags:
+            self.skip_depth = 1
+
+    def handle_endtag(self, tag):
+        if self.skip_depth:
+            self.skip_depth -= 1
+
+    def handle_data(self, data):
+        if not self.skip_depth:
+            text = " ".join(data.split())
+            if text:
+                self.parts.append(text)
+
+
+def extract_website_text(html):
+    """Convert HTML into readable research text."""
+    parser = WebsiteTextExtractor()
+    parser.feed(html)
+    return " ".join(parser.parts)
