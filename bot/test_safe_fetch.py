@@ -1,5 +1,5 @@
 """Tests for AI ToolRank's safe URL validation."""
-
+from unittest.mock import patch, MagicMock
 from safe_fetch import (
     is_allowed_url,
     has_public_dns,
@@ -61,5 +61,24 @@ def main():
     connection.close()
 
     print("PASS: HTTPS connection configuration")
+    print("\nTesting pinned HTTPS connection behavior...")
+
+    with patch("safe_fetch.socket.create_connection") as mock_connect:
+        with patch.object(connection._context, "wrap_socket") as mock_tls:
+            mock_connect.return_value = MagicMock()
+            mock_tls.return_value = MagicMock()
+
+            connection.connect()
+
+            mock_connect.assert_called_once_with(
+                ("1.1.1.1", 443),
+                10,
+            )
+
+            assert mock_tls.call_args.kwargs["server_hostname"] == "cursor.com"
+
+    connection.close()
+
+    print("PASS: Pinned IP and TLS hostname verification")
 if __name__ == "__main__":
     main()
