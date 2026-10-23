@@ -4,6 +4,7 @@ from safe_fetch import (
     is_allowed_url,
     has_public_dns,
     get_verified_public_ips,
+    create_verified_connection,
     fetch_official_page,
     PinnedHTTPSConnection,
 )
@@ -128,5 +129,21 @@ def main():
             mock_connect.assert_not_called()
 
     print("PASS: Network retrieval remains disabled")
+        print("\nTesting verified HTTPS connection helper...")
+
+    with patch(
+        "safe_fetch.get_verified_public_ips",
+        return_value=["8.8.8.8"],
+    ) as mock_verified:
+        connection = create_verified_connection("https://cursor.com/")
+
+        assert isinstance(connection, PinnedHTTPSConnection)
+        assert connection.host == "cursor.com"
+        assert connection.verified_ip == "8.8.8.8"
+        mock_verified.assert_called_once_with("https://cursor.com/")
+
+        connection.close()
+
+    print("PASS: Verified HTTPS connection helper")
 if __name__ == "__main__":
     main()
