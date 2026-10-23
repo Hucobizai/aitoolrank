@@ -37,22 +37,20 @@ class TextExtractor(HTMLParser):
             return
 
         if self.content_depth > 0:
-            value = re.sub(r"\s+", " ", data).strip()
+                    value = re.sub(r"\s+", " ", data).strip()
 
-            if value:
-                self.parts.append(value)
+                    if value:
+                        self.parts.append(value)
 
-def main():
-    approved_tools = {
-        "Cursor": "https://cursor.com/",
-       "ChatGPT": "https://openai.com/chatgpt/overview/"
-    }
 
-    tool_name = "ChatGPT"
-    url = approved_tools[tool_name]
+
+
+
+def research_tool(tool_name, url):
+    
     parsed = urlparse(url)
 
-    if parsed.scheme != "https" or url not in approved_tools.values():
+   if parsed.scheme != "https" or not parsed.hostname:
         raise ValueError("Unexpected research URL")
 
     print("Research test configured for:", url)
@@ -146,6 +144,17 @@ def main():
         print(json.dumps(feature_suggestions, indent=2))
     except Exception as error:
         print("Website retrieval failed:", type(error).__name__)
+
+
+def main():
+    approved_tools = {
+        "Cursor": "https://cursor.com/",
+        "ChatGPT": "https://openai.com/chatgpt/overview/"
+    }
+
+    for tool_name, url in approved_tools.items():
+        print("\n--- Researching:", tool_name, "---")
+        research_tool(tool_name, url)
 
 
 if __name__ == "__main__":
